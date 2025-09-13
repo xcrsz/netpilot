@@ -6,7 +6,7 @@
 [![GhostBSD](https://img.shields.io/badge/GhostBSD-Compatible-blue)](https://ghostbsd.org/)
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue?logo=python)](https://python.org/)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-green)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.1.0-brightgreen)](https://github.com/yourusername/netpilot)
+[![Version](https://img.shields.io/badge/Version-0.0.4-brightgreen)](https://github.com/yourusername/netpilot)
 
 NetPilot is a comprehensive network device discovery and automated system configuration tool specifically designed for GhostBSD and FreeBSD systems. It automatically detects network hardware, loads appropriate drivers, installs device-specific firmware, configures system files, and sets up network interfaces with **complete zero-touch automation**.
 
