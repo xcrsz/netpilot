@@ -238,12 +238,6 @@ fi
 
 ### Complete System Configuration
 ```
-    ╔═══════════════════════════════════════╗
-    ║           🌐 NetPilot v1.1.0            ║
-    ║  Advanced Network Discovery & Management ║
-    ║        for GhostBSD & FreeBSD            ║
-    ╚═══════════════════════════════════════╝
-
 🌐 NetPilot Discovery Results
    Discovery time: 3.21s
    FreeBSD version: 14.0-RELEASE
@@ -543,6 +537,7 @@ NetPilot is released under the BSD 2-Clause License. See [LICENSE](LICENSE) for 
 - **FreeBSD Foundation** - For the excellent network stack and driver framework
 - **GhostBSD Team** - For making FreeBSD accessible to desktop users
 - **Hardware Vendors** - Intel, Realtek, Qualcomm, Broadcom, MediaTek for open-source driver support
+- **FreeBSD Ports Team** - For maintaining the comprehensive firmware package collection
 
 ## 🔗 Links
 
@@ -553,6 +548,6 @@ NetPilot is released under the BSD 2-Clause License. See [LICENSE](LICENSE) for 
 
 ---
 
-**Made with ❤️ for the FreeBSD and GhostBSD communities**
+**Made with ❤️ for the GhostBSD and FreeBSD communities**
 
 *NetPilot v0.0.4 - Because network setup should just work™*
