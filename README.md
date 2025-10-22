@@ -53,7 +53,7 @@ NetPilot is a comprehensive network device discovery and automated system config
 ### Quick Install
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/netpilot.git
+git clone https://github.com/xcrsz/netpilot.git
 cd netpilot
 
 # Make executable
