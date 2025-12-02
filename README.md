@@ -3,7 +3,7 @@
 **Advanced Network Device Discovery and Automated System Configuration for FreeBSD/PGSD**
 
 [![FreeBSD](https://img.shields.io/badge/FreeBSD-13%2B-red?logo=freebsd)](https://www.freebsd.org/)
-[![PGSD](https://img.shields.io/badge/PGSD-13%2B-red?logo=pgsd)](https://www.pgsdf.org/)
+[![PGSD](https://img.shields.io/badge/PGSD-0.0.1%2B-red?logo=pgsd)](https://www.pgsdf.org/)
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue?logo=python)](https://python.org/)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-green)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-0.0.4-brightgreen)](https://github.com/yourusername/netpilot)
