@@ -1,53 +1,53 @@
-# 🌐 NetPilot
+# NetPilot
 
 **Advanced Network Device Discovery and Automated System Configuration for GhostBSD/FreeBSD**
 
 [![FreeBSD](https://img.shields.io/badge/FreeBSD-13%2B-red?logo=freebsd)](https://www.freebsd.org/)
-[![GhostBSD](https://img.shields.io/badge/GhostBSD-Compatible-blue)](https://ghostbsd.org/)
+[![PGSD](https://img.shields.io/badge/PGSD-13%2B-red?logo=pgsd)](https://www.pgsdf.org/)
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue?logo=python)](https://python.org/)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-green)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-0.0.4-brightgreen)](https://github.com/yourusername/netpilot)
 
-NetPilot is a comprehensive network device discovery and automated system configuration tool specifically designed for GhostBSD and FreeBSD systems. It automatically detects network hardware, loads appropriate drivers, installs device-specific firmware, configures system files, and sets up network interfaces with **complete zero-touch automation**.
+NetPilot is a comprehensive network device discovery and automated system configuration tool specifically designed for FreeBSD and PGSD systems. It automatically detects network hardware, loads appropriate drivers, installs device-specific firmware, configures system files, and sets up network interfaces with **complete zero-touch automation**.
 
-## ✨ Features
+## Features
 
-### 🔍 **Intelligent Hardware Discovery**
+### **Intelligent Hardware Discovery**
 - **Parallel device scanning** - PCI and USB devices discovered simultaneously
 - **Modern hardware support** - WiFi 6E/7, latest Intel/Realtek/Qualcomm/MediaTek chipsets
 - **Smart classification** - automatically distinguishes Ethernet vs WiFi devices
 - **Comprehensive vendor database** - 60+ supported network device families
 
-### 🚀 **Automated Driver Management**
+### **Automated Driver Management**
 - **Dependency resolution** - automatically loads required kernel modules (linuxkpi, lindebugfs)
 - **Intelligent load ordering** - Ethernet first, then WiFi for optimal setup
 - **Conflict avoidance** - prevents loading incompatible drivers
 - **Device-specific firmware** - installs exact firmware packages for each chipset
 
-### ⚙️ **System Configuration Automation**
+### **System Configuration Automation**
 - **Boot-time driver loading** - automatically configures `/boot/loader.conf`
 - **Interface startup configuration** - manages `/etc/rc.conf` entries
 - **WiFi interface creation** - creates and configures wlan interfaces
 - **DHCP auto-configuration** - sets up automatic network connectivity
 - **Configuration preview** - see changes before applying them
 
-### 🛡️ **Safety & Backup System**
+### **Safety & Backup System**
 - **Automatic backups** - timestamped backups of all modified files in `/var/backups/netpilot/`
 - **Change tracking** - complete audit trail of all modifications
 - **Rollback capability** - restore from backups if needed
 - **Preview mode** - validate configuration changes before applying
 
-### 📊 **Enterprise-Grade Diagnostics**
+### **Enterprise-Grade Diagnostics**
 - **Performance timing** - sub-second discovery with detailed metrics
 - **Comprehensive reporting** - JSON output for automation/scripting
 - **Success tracking** - module load success/failure analytics
 - **Hardware coverage reports** - see exactly what's supported
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
-- FreeBSD 13.0+ or GhostBSD
-- Python 3.7+
+- FreeBSD 13.0+ or PBSD
+- Python 3.11+
 - Root privileges (for driver loading and system configuration)
 
 ### Quick Install
@@ -91,7 +91,7 @@ wifi-firmware-mt7601u-kmod          # MT7601U USB
 
 NetPilot automatically selects the most specific firmware package for your exact chipset, with intelligent fallbacks to generic packages when needed.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Zero-Touch System Setup
 ```bash
@@ -130,7 +130,7 @@ sudo ./netpilot.py --configure-startup --configure-dhcp
 ./netpilot.py --show-coverage
 ```
 
-## 📖 Usage Examples
+## Usage Examples
 
 ### Complete System Configuration
 Perfect for new installations or system setup:
@@ -201,7 +201,7 @@ else
 fi
 ```
 
-## 🔧 Command Reference
+## Command Reference
 
 ### Basic Options
 | Option | Description |
@@ -234,11 +234,11 @@ fi
 |--------|-------------|
 | `--retry-failed` | Retry previously failed module loads |
 
-## 🖥️ Sample Output
+## Sample Output
 
 ### Complete System Configuration
 ```
-🌐 NetPilot Discovery Results
+NetPilot Discovery Results
    Discovery time: 3.21s
    FreeBSD version: 14.0-RELEASE
    Total devices: 2 PCI + 1 USB
@@ -246,7 +246,7 @@ fi
    Active interfaces: 1
    Modules loaded: 4 (failed: 0)
 
-📡 Network Interfaces:
+Network Interfaces:
    🟢 🔌 em0: active (1G)
        MAC: 52:54:00:12:34:56
        IPs: 192.168.1.100
@@ -254,21 +254,21 @@ fi
    🔴 📡 iwm0: inactive
        MAC: aa:bb:cc:dd:ee:ff
 
-✅ Successfully loaded drivers:
+Successfully loaded drivers:
    • if_em for Intel Corporation 82574L Gigabit Ethernet
    • if_iwlwifi for Intel Corporation WiFi 6 AX210
    • linuxkpi for Linux KPI compatibility layer
 
-📦 Firmware installed:
+Firmware installed:
    • wifi-firmware-iwlwifi-kmod-ax210 for Intel Corporation WiFi 6 AX210
 
-⚙️  System Configuration:
+System Configuration:
    • /boot/loader.conf: ✅ Success (4 entries)
    • /etc/rc.conf: ✅ Success (3 entries)
    • Total changes: 7
    • Backup directory: /var/backups/netpilot
 
-📡 WiFi Interfaces Created:
+WiFi Interfaces Created:
    • wlan0 (for iwm0)
 
 💡 Reboot recommended to test automatic driver loading
@@ -279,7 +279,7 @@ fi
 sudo netpilot --show-config-changes
 ```
 ```
-📝 Configuration Changes Preview:
+Configuration Changes Preview:
 
 /boot/loader.conf entries (4):
   + if_em_load="YES"  # Load if_em network driver at boot
@@ -300,14 +300,14 @@ To apply these changes, run with --configure-boot and/or --configure-startup
 sudo netpilot --scan-wifi --interface wlan0
 ```
 ```
-📡 Available WiFi Networks on wlan0:
+Available WiFi Networks on wlan0:
    • MyNetwork-5G    | -45 dBm | Ch 36  | WPA2/WPA3
    • MyNetwork-2.4G  | -52 dBm | Ch 6   | WPA2  
    • Guest_Network   | -67 dBm | Ch 11  | Open
    • Neighbor_WiFi   | -78 dBm | Ch 1   | WPA2
 ```
 
-## 🔌 Hardware Support
+## Hardware Support
 
 NetPilot supports 60+ network device families with device-specific firmware:
 
@@ -352,7 +352,7 @@ NetPilot supports 60+ network device families with device-specific firmware:
 
 *See `netpilot --show-coverage` for the complete list.*
 
-## 🏗️ Architecture
+## Architecture
 
 ### Core Components
 - **CommandRunner**: Parallel command execution with intelligent caching
@@ -373,10 +373,6 @@ NetPilot supports 60+ network device families with device-specific firmware:
 - **Change Tracking**: Complete audit trail of all modifications
 - **Atomic Updates**: Safe file modification with rollback capability
 - **Intelligent Merging**: Preserves existing configuration while adding new entries
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how to get started:
 
 ### Development Setup
 ```bash
@@ -406,7 +402,7 @@ sudo python3 netpilot.py --show-config-changes
 sudo python3 netpilot.py --interface YOUR_INTERFACE -v
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -515,7 +511,7 @@ sudo netpilot --configure-boot --configure-startup -v --json-output > debug.json
 # Check the debug.json file for detailed information
 ```
 
-## 📋 TODO
+## TODO
 
 - [ ] **GUI Interface**: GTK-based graphical interface for desktop users
 - [ ] **WPA Configuration**: Automated WiFi security setup with wpa_supplicant integration
@@ -528,26 +524,8 @@ sudo netpilot --configure-boot --configure-startup -v --json-output > debug.json
 - [ ] **Configuration Templates**: Predefined setups for common deployment scenarios
 - [ ] **Hardware Database Updates**: Online updates for latest device support
 
-## 📄 License
+## License
 
 NetPilot is released under the BSD 2-Clause License. See [LICENSE](LICENSE) for details.
-
-## 🙏 Acknowledgments
-
-- **FreeBSD Foundation** - For the excellent network stack and driver framework
-- **GhostBSD Team** - For making FreeBSD accessible to desktop users
-- **Hardware Vendors** - Intel, Realtek, Qualcomm, Broadcom, MediaTek for open-source driver support
-- **FreeBSD Ports Team** - For maintaining the comprehensive firmware package collection
-
-## 🔗 Links
-
-- [FreeBSD Handbook - Network Configuration](https://docs.freebsd.org/en/books/handbook/config/)
-- [GhostBSD Documentation](https://ghostbsd.org/documentation)
-- [FreeBSD Network Drivers](https://wiki.freebsd.org/NetworkDrivers)
-- [FreeBSD WiFi Firmware Packages](https://www.freshports.org/net/wifi-firmware-kmod/)
-
----
-
-**Made with ❤️ for the GhostBSD and FreeBSD communities**
 
 *NetPilot v0.0.4 - Because network setup should just work™*
