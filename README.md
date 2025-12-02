@@ -1,6 +1,6 @@
 # NetPilot
 
-**Advanced Network Device Discovery and Automated System Configuration for GhostBSD/FreeBSD**
+**Advanced Network Device Discovery and Automated System Configuration for FreeBSD/PGSD**
 
 [![FreeBSD](https://img.shields.io/badge/FreeBSD-13%2B-red?logo=freebsd)](https://www.freebsd.org/)
 [![PGSD](https://img.shields.io/badge/PGSD-13%2B-red?logo=pgsd)](https://www.pgsdf.org/)
