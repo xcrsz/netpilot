@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-NetPilot - Advanced Network Device Discovery and Management for GhostBSD/FreeBSD
+NetPilot - Advanced Network Device Discovery and Management for FreeBSD/PGSD
 
 This script provides comprehensive network device discovery, driver management,
 interface configuration, and network diagnostics for GhostBSD and FreeBSD systems.
